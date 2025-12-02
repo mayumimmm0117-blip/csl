@@ -338,6 +338,16 @@
           <text macro="journal-location"/>
           <text macro="pages"/>
         </group>
+<choose>
+  <if variable="page">
+    <!-- ページがあれば DOI を表示しない -->
+  </if>
+  <else>
+    <!-- ページがないときだけ DOI を表示 -->
+    <text value="https://doi.org/"/>
+    <text variable="DOI"/>
+  </else>
+</choose>
       </group>
       <text macro="collection-details" suffix=". "/>
       <text macro="report-details" suffix=". "/>
