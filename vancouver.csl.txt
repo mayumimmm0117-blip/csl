@@ -339,15 +339,18 @@
           <text macro="pages"/>
         </group>
 <choose>
-  <if variable="page">
-    <!-- ページがあれば DOI を表示しない -->
+  <if variable="DOI">
+    <choose>
+      <if variable="page">
+        <!-- ページがあれば DOI を表示しない -->
+      </if>
+      <else>
+        <text value="DOI: "/>
+        <text variable="DOI"/>
+      </else>
+    </choose>
   </if>
-  <else>
-    <text value="DOI: "/>
-    <text variable="DOI"/>
-  </else>
-</choose>
-      </group>
+</choose>      </group>
       <text macro="collection-details" suffix=". "/>
       <text macro="report-details" suffix=". "/>
       <text macro="access"/>
