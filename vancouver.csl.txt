@@ -350,7 +350,9 @@
       </else>
     </choose>
   </if>
-</choose>      </group>
+</choose>
+
+  </group>
       <text macro="collection-details" suffix=". "/>
       <text macro="report-details" suffix=". "/>
       <text macro="access"/>
