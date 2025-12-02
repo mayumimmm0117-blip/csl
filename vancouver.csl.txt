@@ -343,8 +343,7 @@
     <!-- ページがあれば DOI を表示しない -->
   </if>
   <else>
-    <!-- ページがないときだけ DOI を表示 -->
-    <text value="https://doi.org/"/>
+    <text value="DOI: "/>
     <text variable="DOI"/>
   </else>
 </choose>
